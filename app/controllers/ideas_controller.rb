@@ -7,6 +7,7 @@ class IdeasController < ApplicationController
 
   def show
     @idea = Idea.find(params[:id])
+    @comment = @idea.comments.build
     render 'show'
   end
 
@@ -17,6 +18,7 @@ class IdeasController < ApplicationController
 
   def edit
     @idea = Idea.find(params[:id])
+   
     render 'edit'
   end
 
