@@ -3283,3 +3283,218 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-22 15:16:34
 
 
 Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-22 15:16:34 -0600
+
+
+Started GET "/ideas" for 127.0.0.1 at 2014-03-22 15:18:56 -0600
+Processing by IdeasController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mIdea Load (0.2ms)[0m  [1mSELECT "ideas".* FROM "ideas"[0m
+  Rendered ideas/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 81ms (Views: 13.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-22 15:18:56 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-22 15:18:56 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-22 15:18:56 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-22 15:18:56 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-22 15:18:56 -0600
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-03-22 15:18:59 -0600
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"KtkMOUsMR4XMg2RphJVbl0+n6ulT1qum4aLJbTr2lD4="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 15:18:59 -0600
+
+
+Started GET "/ideas" for 127.0.0.1 at 2014-03-22 15:18:59 -0600
+Processing by IdeasController#index as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-03-22 15:18:59 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/carlifries84/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (0.7ms)
+  Rendered /Users/carlifries84/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-22 15:18:59 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-22 15:18:59 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-22 15:18:59 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-22 15:18:59 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-22 15:18:59 -0600
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-03-22 15:19:09 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jv3jjEGRibIeN8QjeU15P1kCCO43g0YyfQHjjDWskxI=", "user"=>{"email"=>"carli.randolf@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'carli.randolf@gmail.com' ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 1[0m  [["current_sign_in_at", Sat, 22 Mar 2014 21:19:09 UTC +00:00], ["sign_in_count", 2], ["updated_at", Sat, 22 Mar 2014 21:19:09 UTC +00:00]]
+  [1m[35m (1.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/ideas
+Completed 302 Found in 84ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/ideas" for 127.0.0.1 at 2014-03-22 15:19:09 -0600
+Processing by IdeasController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mIdea Load (0.1ms)[0m  SELECT "ideas".* FROM "ideas"
+  Rendered ideas/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-22 15:19:09 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-22 15:19:09 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-22 15:19:09 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-22 15:19:09 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-22 15:19:09 -0600
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-03-22 15:19:13 -0600
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"UqoEbPfo17udWs0p6J0wpwvVQebf+p+Ze52KcTdnRBI="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 15:19:13 -0600
+
+
+Started GET "/ideas" for 127.0.0.1 at 2014-03-22 15:19:13 -0600
+Processing by IdeasController#index as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-03-22 15:19:13 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/carlifries84/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (0.4ms)
+  Rendered /Users/carlifries84/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-22 15:19:13 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-22 15:19:13 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-22 15:19:13 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-22 15:19:13 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-22 15:19:13 -0600
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-03-22 15:19:22 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EAlDwJQmRPlQGgDPQ325SICFk7nMd0+ROMT5vCp7Bn0=", "user"=>{"email"=>"carli.randolf@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'carli.randolf@gmail.com' ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = 1  [["remember_created_at", Sat, 22 Mar 2014 21:19:22 UTC +00:00], ["updated_at", Sat, 22 Mar 2014 21:19:22 UTC +00:00]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 1[0m  [["last_sign_in_at", Sat, 22 Mar 2014 21:19:09 UTC +00:00], ["current_sign_in_at", Sat, 22 Mar 2014 21:19:22 UTC +00:00], ["sign_in_count", 3], ["updated_at", Sat, 22 Mar 2014 21:19:22 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/ideas
+Completed 302 Found in 105ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/ideas" for 127.0.0.1 at 2014-03-22 15:19:22 -0600
+Processing by IdeasController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mIdea Load (0.2ms)[0m  SELECT "ideas".* FROM "ideas"
+  Rendered ideas/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-22 15:19:22 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-22 15:19:22 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-22 15:19:22 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-22 15:19:22 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-22 15:19:22 -0600
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-03-22 15:19:25 -0600
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zGrTmnS1LOaIXlVN+wnehzp8lzbtSgL8d+8iP5Blbtw="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = 1[0m  [["remember_created_at", nil], ["updated_at", Sat, 22 Mar 2014 21:19:25 UTC +00:00]]
+  [1m[35m (1.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 15:19:25 -0600
+
+
+Started GET "/ideas" for 127.0.0.1 at 2014-03-22 15:19:25 -0600
+Processing by IdeasController#index as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-03-22 15:19:25 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/carlifries84/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/devise-3.2.4/app/views/devise/shared/_links.erb (0.4ms)
+  Rendered /Users/carlifries84/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-22 15:19:25 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-22 15:19:25 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-22 15:19:25 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-22 15:19:25 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-22 15:19:25 -0600
