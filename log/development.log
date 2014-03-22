@@ -3498,3 +3498,49 @@ Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-22 15:19:25 -060
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-22 15:19:25 -0600
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-03-22 15:20:24 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bhl68TVvYUGChWNgLexjyK7RSZ0pGqfWqxrP6ds+2nE=", "user"=>{"email"=>"carli.randolf@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'carli.randolf@gmail.com' ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 1[0m  [["last_sign_in_at", Sat, 22 Mar 2014 21:19:22 UTC +00:00], ["current_sign_in_at", Sat, 22 Mar 2014 21:20:24 UTC +00:00], ["sign_in_count", 4], ["updated_at", Sat, 22 Mar 2014 21:20:24 UTC +00:00]]
+  [1m[35m (1.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/ideas
+Completed 302 Found in 85ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/ideas" for 127.0.0.1 at 2014-03-22 15:20:24 -0600
+Processing by IdeasController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mIdea Load (0.1ms)[0m  SELECT "ideas".* FROM "ideas"
+  Rendered ideas/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-22 15:20:24 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-22 15:20:24 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-22 15:20:24 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-22 15:20:24 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-22 15:20:24 -0600
+
+
+Started GET "/ideas/6" for 127.0.0.1 at 2014-03-22 15:20:29 -0600
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mIdea Load (0.3ms)[0m  SELECT "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT 1  [["id", "6"]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 6]]
+  Rendered comments/_form.html.erb (3.7ms)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from _app_views_ideas_show_html_erb__3143823696404365370_70326496769240 at /Users/carlifries84/projects/railsgirls/app/views/ideas/show.html.erb:22)
+  Rendered ideas/show.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 92ms (Views: 12.3ms | ActiveRecord: 1.3ms)
